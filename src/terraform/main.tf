@@ -12,3 +12,14 @@ resource "google_dns_managed_zone" "crdant_dev" {
   }
 }
 
+resource "google_dns_record_set" "crdant_dev_caa" {
+  name         = google_dns_managed_zone.crdant_dev.dns_name
+  managed_zone = google_dns_managed_zone.crdant_dev.name
+  type         = "CAA"
+  ttl          = 300
+
+  rrdatas = [
+    "0 issue letsencrypt.org"
+  ]
+}
+
