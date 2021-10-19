@@ -19,7 +19,7 @@ resource "google_dns_record_set" "crdant_dev_caa" {
   ttl          = 300
 
   rrdatas = [
-    "0 issue letsencrypt.org"
+    "0 issue \"letsencrypt.org\""
   ]
 }
 
