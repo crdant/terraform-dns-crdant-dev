@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "terraform-dns-crdant-dev"
-    prefix  = "terraform/state"
+    bucket = "terraform-dns-crdant-dev"
+    prefix = "terraform/state"
   }
 }
